@@ -1,0 +1,7 @@
+popper.js
+echo "# ClientGestionStockProduits" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/akoua/ClientGestionStockProduits.git
+git push -u origin master
