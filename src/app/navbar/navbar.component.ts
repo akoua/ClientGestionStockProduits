@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   @Input()
-  showSideBarBool:boolean;
+  showSideBar:boolean;
 
   @Output()
   showSideBarChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -19,8 +19,8 @@ export class NavbarComponent implements OnInit {
   }
 
   afficherSideBar(){
-    this.showSideBarBool = !this.showSideBarBool;
-    this.showSideBarChanged.emit(this.showSideBarBool);
+    this.showSideBar = !this.showSideBar;
+    this.showSideBarChanged.emit(this.showSideBar);
   }
 
 }

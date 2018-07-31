@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  showSideBar:boolean = false;
+  showHideSideBar:boolean = false;
 
-  OnShowSideBarChange(showSideBar){
-    this.showSideBar = showSideBar;
+  OnShowSideBarChanged(showSideBar){
+    this.showHideSideBar = showSideBar;
   }
 }
 
