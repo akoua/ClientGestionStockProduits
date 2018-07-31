@@ -1,2 +1,10 @@
-<h2>HELLLO</h2>
-<app-produit></app-produit>
+<div class="row body">
+  <div class="col-lg-1" *ngIf="showSideBar">
+      <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-lg-11">    
+       <app-navbar [showSideBarBool]="showSideBar"
+       (showSideBarChange)="OnShowSideBarChange($event)" ></app-navbar>
+       <app-content></app-content>    
+  </div>
+</div>
