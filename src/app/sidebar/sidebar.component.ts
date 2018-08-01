@@ -18,6 +18,10 @@ export class SidebarComponent implements OnInit {
       this.router.navigate(['produit']);
       //console.log(this.router.routerState );
     }
+    if (event.srcElement.textContent == "Home" ) {      
+      this.router.navigate(['home']);
+      //console.log(this.router.routerState );
+    }
    //event.preventDefault();
   }
 

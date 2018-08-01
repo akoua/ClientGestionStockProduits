@@ -1,7 +1,20 @@
-<ul>
-  <li>
-    <div *ngFor="let p of produits">
-    <strong>NOM:</strong>  {{p.nom}}, <strong>Prix:</strong> {{p.prix}}
-    </div>
-  </li>
-</ul>
+<div class="mt-3">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Réference</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Prix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of produits">
+            <th scope="row"> {{p.ref}} </th>
+            <td>{{p.nom}}</td>
+            <td>{{p.quantity}}</td>
+            <td>{{p.prix}}</td>
+          </tr>                
+        </tbody>
+      </table>
+</div>
