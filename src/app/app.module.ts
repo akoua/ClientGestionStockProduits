@@ -9,7 +9,9 @@ import { Produit } from './shared/produit';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
+import { HomeComponent } from './home/home.component';
 
+import {  AppRoutingModule } from './app.routing.module'
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { ContentComponent } from './content/content.component';
     ProduitComponent,
     NavbarComponent,
     SidebarComponent,
-    ContentComponent
+    ContentComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [ProduitService],
   bootstrap: [AppComponent]
