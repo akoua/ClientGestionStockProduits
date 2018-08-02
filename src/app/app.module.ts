@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -10,8 +11,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
 import { HomeComponent } from './home/home.component';
+import { HttpModule } from '@angular/http';
 
 import {  AppRoutingModule } from './app.routing.module'
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import {  AppRoutingModule } from './app.routing.module'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [ProduitService],
   bootstrap: [AppComponent]
