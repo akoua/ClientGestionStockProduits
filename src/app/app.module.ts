@@ -11,9 +11,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
 import { HomeComponent } from './home/home.component';
-import { HttpModule } from '@angular/http';
 
 import {  AppRoutingModule } from './app.routing.module'
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,13 +23,13 @@ import {  AppRoutingModule } from './app.routing.module'
     NavbarComponent,
     SidebarComponent,
     ContentComponent,
-    HomeComponent
+    HomeComponent    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [ProduitService],
   bootstrap: [AppComponent]

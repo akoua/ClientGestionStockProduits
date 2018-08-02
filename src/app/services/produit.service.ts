@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Produit } from '../shared/produit';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import { API_URL } from '../config/api.url'
 
 @Injectable()
 export class ProduitService {
   
   private PRODUITS: Produit[] = [];
-  constructor() {
+  constructor(private http: HttpClient ) {
     let p1: Produit = new Produit('Livre','mamadou cool',50, 25);
     let p2: Produit = new Produit('Livre','mamadou gasama',75, 157);
 
@@ -13,7 +16,7 @@ export class ProduitService {
     this.PRODUITS.push(p2);
    }
 
-   public getProduits(){
-     return this.PRODUITS;
+   public getProduits():Observable<any> {
+     return this.http.get(API_URL.PRODUITS_URL);
    }
 }

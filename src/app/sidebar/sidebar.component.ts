@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-sidebar',
@@ -8,21 +9,33 @@ import { Router } from '@angular/router';
 })
 export class SidebarComponent implements OnInit {
   
+  //pas vraiment besoin d'initialiser un input
+  
+  showSideBar2:boolean = false;
+  @Output()
+  showSideBarChanged2: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   constructor(protected router: Router) { }
 
   ngOnInit() {
   }
 
-  sideBarChanged($event){                
+  sideBarChanged(){      
+    
+    //this.showSideBar2 = false;
+    this.showSideBarChanged2.emit(this.showSideBar2);
+    console.log("sidebar:"+this.showSideBar2 );
+
     if (event.srcElement.textContent == "Produit" ) {      
       this.router.navigate(['produit']);
       //console.log(this.router.routerState );
     }
-    if (event.srcElement.textContent == "Home" ) {      
+    else if (event.srcElement.textContent == "Home" ) {      
       this.router.navigate(['home']);
       //console.log(this.router.routerState );
     }
-   //event.preventDefault();
+   
+    //event.preventDefault();   
   }
 
 }

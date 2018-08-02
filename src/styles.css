@@ -1,17 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-a {
-    text-decoration: underline;
-    color: #a00;
-  }
-  a:visited {
-    color: rgb(68, 92, 136);
-  }
-  a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: white;
-    background: none;
-  }
-
 .clickable{
     cursor: pointer;
 }

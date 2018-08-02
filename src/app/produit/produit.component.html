@@ -31,7 +31,7 @@
                     <input type="text"formControlName="ref" id="ref" class="form-control" >                    
                 </div>
                 <div class="alert alert-danger" *ngIf="produitForm.controls['ref'].invalid 
-                &&  produitForm.controls['ref'].touched || produitForm.controls['ref'].dirty">Réference est obligatoire
+                && produitForm.controls['ref'].dirty">Réference est obligatoire
                 </div>
                 <div class="form-group">
                     <label for="qt">Quantite</label>

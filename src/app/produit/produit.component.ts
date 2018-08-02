@@ -18,15 +18,23 @@ export class ProduitComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.produits = this.produitService.getProduits();
+    this.getProduit();
   }
 
   createForm(){
     this.produitForm = this.fb.group({
-      ref:['',Validators.required, Validators.minLength(4) ],
+      ref:['',Validators.required],
       quantite:'',
       prix:''     
     })
+  }
+
+  getProduit(){
+    this.produitService.getProduits().subscribe(
+      data => {this.produits = data},
+      err=> { console.log(err) },
+      () => { console.log('loading produits was done.')}
+    );
   }
 
 }
