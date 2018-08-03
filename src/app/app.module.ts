@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 
 import {  AppRoutingModule } from './app.routing.module'
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     SidebarComponent,
     ContentComponent,
-    HomeComponent    
+    HomeComponent,
+    LoginComponent    
   ],
   imports: [
     BrowserModule,

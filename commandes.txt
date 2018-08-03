@@ -4,3 +4,5 @@ npm install --save font-awesome angular-font-awesome
 npm install jquery --save
 
 npm install --save popper.js angular-popper
+
+ng g c new-component --module app
