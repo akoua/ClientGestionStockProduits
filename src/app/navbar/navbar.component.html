@@ -1,5 +1,8 @@
 <div>   
-  <!-- data-toggle contient le type de bouton qui va être lié à un bouton-->
+  <div class="text-right">
+    <button class="btn btn-outline-danger" (click)="logout()" >Deconnexion</button>
+  </div>
+   <!-- data-toggle contient le type de bouton qui va être lié à un bouton-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">  
         <a href="" data-toggle="collapse" (click)="afficherSideBar()"><i class="fa fa-bars" aria-hidden="true"></i></a>
         <hr/>
@@ -7,16 +10,7 @@
           <ul class="navbar-nav">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
+            </li>            
           </ul>
         </div>
       </nav>

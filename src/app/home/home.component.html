@@ -1,3 +1,13 @@
-<p>
-  home works!
-</p>
+<div class="row">
+    <div class="col-lg-1" *ngIf="showHideSideBar">
+        <app-sidebar      
+        (showSideBarChanged2) = "OnShowSideBarChanged2($event)" ></app-sidebar>
+    </div>
+    <div class="col-lg-11">   
+      <!-- cete ligne permet d initialiser showSideBar dans navbar.component.ts avec la valeur de showHideSideBar dans app.component.ts on peut donc supprimer @Input en initialisant directement nous meme --> 
+         <app-navbar [showSideBar] = "showHideSideBar" 
+         (showSideBarChanged) = "OnShowSideBarChanged($event)"
+          ></app-navbar>
+         <app-content></app-content>    
+    </div>
+  </div>

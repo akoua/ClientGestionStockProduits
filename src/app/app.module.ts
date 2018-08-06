@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import {  AppRoutingModule } from './app.routing.module'
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { AppServiceService } from './services/app-service.service';
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ProduitService],
+  providers: [ProduitService, AppServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

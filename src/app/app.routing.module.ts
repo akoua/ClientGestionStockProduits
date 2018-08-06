@@ -4,18 +4,26 @@ import { RouterModule, Routes} from '@angular/router'
 import { ProduitComponent } from './produit/produit.component';
 import { HomeComponent } from './home/home.component';
 import { ProduitResolverService } from './services/produit-resolver.service';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes:Routes = [
+    
+    {path:'login', component: LoginComponent},
     {
-        path:'produit',
-        component:ProduitComponent,
-        resolve: {
-            //implementer dans le produit resolver pour eviter les pages blanches
-            produits: ProduitResolverService
-        }
+        path:'home',
+        component:HomeComponent,
+        children:[
+            {   path:'produit',
+                component:ProduitComponent,
+                resolve: {
+                    //implementer dans le produit resolver pour eviter les pages blanches
+                    produits: ProduitResolverService
+                },
+                outlet: 'contentOulet'
+            }
+        ]
     },
-    {path:'home', component:HomeComponent},
-    {path:'',redirectTo:'/home',pathMatch:'full'}
+    {path:'',redirectTo:'/login',pathMatch:'full'}
 ]
 
 @NgModule({

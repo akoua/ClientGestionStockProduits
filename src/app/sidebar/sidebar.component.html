@@ -1,9 +1,9 @@
 <ul class="nav flex-column">
     <li class="nav-item">
-      <a class="nav-link active clickable"   (click)="sideBarChanged()">Home</a>
+      <a class="nav-link active clickable"   [routerLink]="[{outlets: {contentOutlet:'home'} } ]">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link clickable"  (click)="sideBarChanged()">Produit</a>
+      <a class="nav-link clickable" [routerLink]="[{outlets: {contentOutlet:'produit'} } ]" routerLinkActive="active" >Produit</a>
     </li>
    <!-- <li class="nav-item">
       <a class="nav-link" routerLink="home" RouterLinkActive="active">Link</a>
