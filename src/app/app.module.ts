@@ -16,6 +16,7 @@ import {  AppRoutingModule } from './app.routing.module'
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { AppServiceService } from './services/app-service.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AppServiceService } from './services/app-service.service';
     SidebarComponent,
     ContentComponent,
     HomeComponent,
-    LoginComponent    
+    LoginComponent,
+    DashboardComponent    
   ],
   imports: [
     BrowserModule,

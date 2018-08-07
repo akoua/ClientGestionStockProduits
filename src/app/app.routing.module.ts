@@ -5,6 +5,7 @@ import { ProduitComponent } from './produit/produit.component';
 import { HomeComponent } from './home/home.component';
 import { ProduitResolverService } from './services/produit-resolver.service';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes:Routes = [
     
@@ -16,10 +17,15 @@ const appRoutes:Routes = [
             {   path:'produit',
                 component:ProduitComponent,
                 resolve: {
-                    //implementer dans le produit resolver pour eviter les pages blanches
+                    //implementer dans le produit resolver pour eviter les pages blanches lors des chargements
                     produits: ProduitResolverService
                 },
-                outlet: 'contentOulet'
+                outlet: 'contentOultet'
+            },
+            {
+                path:'dashboard',
+                component:DashboardComponent,
+                outlet: 'contentOultet'
             }
         ]
     },
