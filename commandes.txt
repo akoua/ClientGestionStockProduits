@@ -6,3 +6,5 @@ npm install jquery --save
 npm install --save popper.js angular-popper
 
 ng g c new-component --module app
+
+npm install ngx-cookie-service --save

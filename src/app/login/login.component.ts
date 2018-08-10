@@ -32,9 +32,10 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    console.log("test");
+    
     this.appService.authenticate(this.credentials,()=>{
       if (this.appService.authenticated) {
+        console.log("test");
         this.route.navigateByUrl("/home"); 
       }else{
         this.loginForm.reset();

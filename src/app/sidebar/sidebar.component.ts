@@ -27,11 +27,11 @@ export class SidebarComponent implements OnInit {
     console.log("sidebar:"+this.showSideBar2 );
 
     if (event.srcElement.textContent == "Produit" ) {      
-      this.router.navigate(['produit']);
+      //this.router.navigate(['produit']);
       //console.log(this.router.routerState );
     }
-    else if (event.srcElement.textContent == "Home" ) {      
-      this.router.navigate(['home']);
+    else if (event.srcElement.textContent == "Dashboard" ) {      
+      //this.router.navigate([{ outlets: {contentOultet:'dashboard'} } ]);
       //console.log(this.router.routerState );
     }
    
